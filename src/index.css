@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 body {
@@ -5,7 +10,81 @@ body {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #212121;
+  background-color: black;
   color: white;
 }
 
+
+
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.movie-component {
+  width: 250px;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #212121;
+}
+
+.movie-component img {
+  height: 80%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  border-bottom: 4px #7A7AC7 solid;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background-color: #212121;
+  border-radius: 3px;
+  padding: 3px;
+  text-align: center;
+}
+
+.search-bar {
+  background-color: #212121;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.navbar-btn {
+  background-color: #212121;
+  height: 30px;
+  width: 100px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+.metadata{
+  padding: 10px;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
