@@ -21,7 +21,7 @@ const Movie = ({ fetchUrl }) => {
             // return response;
           }
           getPost();
-    }, [])
+    }, [fetchUrl])
 
     return (
     movie.map((m) => (

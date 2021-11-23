@@ -79,7 +79,7 @@ textarea:focus, input:focus{
 .categories {
   display: flex;
   width: 400px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .metadata{
@@ -87,4 +87,13 @@ textarea:focus, input:focus{
   display: flex;
   font-size: 14px;
   justify-content: space-between;
+}
+
+.cat-btn {
+  height: 30px;
+}
+
+
+.cat-btn:hover {
+  background-color: #565353;
 }
