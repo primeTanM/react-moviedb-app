@@ -5,7 +5,7 @@ const SEARCH_REQUEST = 'https://api.themoviedb.org/3/search/movie?api_key=bdec1f
 
 const requests = {
     fetchTopRated: `movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`,
-    // fetchTrending: `trending/movie/week?api_key=${API_KEY}`,
+    fetchTrending: `trending/movie/week?api_key=${API_KEY}`,
     fetchPopular: ` movie/popular?api_key=${API_KEY}&language=en-US&page=1`,
     fetchUpcoming: ` movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
 }

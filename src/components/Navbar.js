@@ -11,6 +11,7 @@ const Navbar = ({ setCategory }) => {
                 <button className="cat-btn" onClick={() => setCategory("popular")}>Popular</button>
                 <button className="cat-btn" onClick={() => setCategory("top_rated")}>Top Rated</button>
                 <button className="cat-btn" onClick={() => setCategory("upcoming")}>Upcoming</button>
+                <button className="cat-btn" onClick={() => setCategory("trending")}>Trending</button>
             </div>
             <SearchBar />
         </div>

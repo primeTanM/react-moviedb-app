@@ -18,7 +18,6 @@ const Movie = ({ fetchUrl }) => {
             const response = await client.get(fetchUrl);
             console.log(response);
             setMovie(response.data.results);
-            // return response;
           }
           getPost();
     }, [fetchUrl])
