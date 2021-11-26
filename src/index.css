@@ -78,7 +78,7 @@ textarea:focus, input:focus{
 
 .categories {
   display: flex;
-  width: 400px;
+  width: 600px;
   justify-content: space-evenly;
 }
 
@@ -96,4 +96,8 @@ textarea:focus, input:focus{
 
 .cat-btn:hover {
   background-color: #565353;
+}
+
+.bookmark {
+  
 }

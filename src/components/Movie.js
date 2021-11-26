@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
-import requests from './ApiRequest';
+import { movieContext } from '../App';
+import { BsBookmarkHeart, BsBookmarkHeartFill } from 'react-icons/bs'
 
-const IMAGE_REQUEST = 'https://image.tmdb.org/t/p/w200';
-const SEARCH_REQUEST = 'https://api.themoviedb.org/3/search/movie?api_key=bdec1fccee55a5f07f481f55fd8dec26&language=en-US&page=1&include_adult=false';
 
 const client = axios.create({
     baseURL: "https://api.themoviedb.org/3/" 
 });
 
-const Movie = ({ fetchUrl }) => {
+const Movie = () => {
+
+    const {setCateogry, fetchCategory} = useContext(movieContext);
+    const fetchUrl = fetchCategory
 
     const [movie, setMovie] = useState([]);
 
@@ -25,7 +27,8 @@ const Movie = ({ fetchUrl }) => {
     return (
     movie.map((m) => (
             <div className="movie-component" key={m.id}>    
-                <img src={`https://image.tmdb.org/t/p/w500${m.backdrop_path}`} alt="" />
+                <img src={`https://image.tmdb.org/t/p/w500${m.backdrop_path}`} alt="Not Found" onError={(e)=>{e.target.onerror = null; e.target.src="https://image.shutterstock.com/image-illustration/leather-background-jpeg-version-260nw-101031550.jpg"}}/>
+                <BsBookmarkHeart className="bookmark" />
                 <div className="metadata">
                     <h1>{m.title}</h1>
                     <a>⭐{m.vote_average}</a>
